@@ -1,4 +1,4 @@
-# Vulnera — Blue Edition
+# Vulnera
 
 **Vulnera** is a blue-and-white, frontend-only security review workspace for the AI coding era. The landing page introduces the purpose of the product and shows **How it works**; clicking the central **Open workspace** button brings reviewers into the original interactive rule-based scanner.
 
