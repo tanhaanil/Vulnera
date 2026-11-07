@@ -1,5 +1,5 @@
 # Vulnera
-
+These days, AI coded things have become more difficult to review. To assist the reviewer in security related issues in code, we have introduced **Vulnera**.
 **Vulnera** is a blue-and-white, frontend-only security review workspace for the AI coding era. The landing page introduces the purpose of the product and shows **How it works**; clicking the central **Open workspace** button brings reviewers into the original interactive rule-based scanner.
 
 ## What's included
@@ -32,7 +32,7 @@
 ## Run on Windows / VS Code
 
 1. Extract the ZIP (do not run the project inside Windows ZIP preview).
-2. Open the extracted folder **vulnera-blue-v2** using VS Code > File > Open Folder.
+2. Open the extracted folder **Vulnera** using VS Code > File > Open Folder.
 3. Open Terminal > New Terminal and run:
 
    ```powershell
@@ -54,37 +54,8 @@ To check the production bundle:
 npm run build
 ```
 
-## Deploy to Vercel
+## Important limitations and further enhancement
 
-Use https://vercel.com/drop to upload the ZIP or the extracted folder. Vercel automatically detects the **Vite** project and builds it. If asked for settings:
+Vulnera is a **rule-based frontend prototype**, not AI-powered scanning or a comprehensive security audit. It can miss genuine issues and may flag safe code. So, further enhancement can be done on integration of rule-based program and AI to have full functionality.
 
-| Setting | Value |
-|---|---|
-| Framework | Vite |
-| Root directory | Folder containing `package.json` |
-| Build command | `npm run build` |
-| Output directory | `dist` |
-| Environment variables | None |
 
-`vercel.json` includes a single-page-app rewrite so direct links such as `/workspace/history` continue to work on page refresh. See `DEPLOY_TO_VERCEL.txt` for more.
-
-## Important limitations
-
-Vulnera is a **rule-based frontend prototype**, not AI-powered scanning or a comprehensive security audit. It can miss genuine issues and may flag safe code. The illustrative score does **not** certify security. The role switch is a simulation, not real authentication. Review decisions are stored locally in the user's browser and can be modified or removed.
-
-Do not interpret "no findings" as "secure." Real enforcement of reviewer permissions and shared audit records requires a trusted backend.
-
-## Project files
-
-- `src/Landing.jsx` and `src/landing.css` — new landing page
-- `src/App.jsx` and `src/styles.css` — updated workspace and navigation
-- `src/lib/scanner.js` — original nine scan rules, unchanged
-- `src/lib/scanner.test.js` — scanner regression tests
-- `src/data/samples.js` — demo snippets
-- `vercel.json` — Vercel Vite + SPA routing config
-
-### Design simplification (v2.1)
-- One centrally positioned **Open workspace** button on the homepage.
-- Navigation only includes **Home** and **How it works**.
-- Removed extra workspace links from the page and the redundant in-workspace guide.
-- Workspace starts with the scanner, findings, review form, and history; browser-local scanning and decisions are unchanged.
