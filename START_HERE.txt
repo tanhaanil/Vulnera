@@ -1,0 +1,22 @@
+VULNERA BLUE EDITION - START HERE (WINDOWS)
+
+1. Extract this ZIP file.
+2. Open the extracted folder in VS Code (File > Open Folder).
+3. Open Terminal > New Terminal.
+4. Run: npm install
+5. Run: npm run dev
+6. Visit the Local URL printed by Vite (usually http://localhost:5173/).
+
+The website starts at the homepage. Click Open workspace to enter the scanner.
+The app has no backend and no AI/API key requirement.
+
+Run scanner tests: npm test
+Production build:  npm run build
+
+VERCEL (NO GITHUB NEEDED)
+Go to https://vercel.com/drop and upload this ZIP or extracted folder.
+Framework = Vite; Build = npm run build; Output = dist.
+
+For more details, read README.md and DEPLOY_TO_VERCEL.txt.
+
+UPDATE: The homepage now has ONE main Open workspace button. How it works is explained only on the landing page.

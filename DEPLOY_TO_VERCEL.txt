@@ -1,0 +1,53 @@
+VULNERA - VERCEL DEPLOYMENT GUIDE
+=================================
+
+OPTION A: VERCEL DROP - NO GITHUB REQUIRED
+
+1. Visit https://vercel.com/drop and log in.
+2. Drag the provided ZIP into the upload area, or upload the extracted project folder.
+3. Name the project (for example, vulnera-security).
+4. Vercel should detect Vite and install/build the source automatically.
+5. If prompted, use:
+   Framework: Vite
+   Root Directory: the folder with package.json
+   Build Command: npm run build
+   Output Directory: dist
+   Environment Variables: none
+6. Click Deploy and open your site's public URL.
+
+NOTE: As documented by Vercel, each new Vercel Drop upload can create
+its own project. To redeploy updates to the same existing project, use
+Vercel CLI or connect a Git repository.
+
+OPTION B: VERCEL CLI FROM VS CODE (UPDATES TO AN EXISTING PROJECT)
+
+1. Extract this ZIP and open the folder in VS Code.
+2. Terminal > New Terminal:
+   npm install
+   npm run build
+   npx vercel login
+   npx vercel --prod
+3. Follow the prompts. Vercel will link the local folder to a project.
+
+LOCAL PREVIEW
+
+   npm install
+   npm run dev
+
+   Then visit the Local URL shown by Vite.
+
+ROUTING
+
+- Homepage: / 
+- Review workspace: /workspace
+- Decision history: /workspace/history
+- Review guide: /workspace
+
+The included vercel.json rewrites routes to index.html for React navigation.
+Do not remove vercel.json.
+
+SECURITY NOTE
+
+This is a browser-based prototype using nine local pattern rules.
+No API keys, server accounts, real authorization, or backend are included.
+Do not use a clean result as proof that code is secure.
